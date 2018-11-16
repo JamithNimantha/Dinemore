@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="402.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.admin.AdminDashController">
+   <children>
+      <AnchorPane prefHeight="403.0" prefWidth="143.0" style="-fx-background-color: grey;">
+         <children>
+            <JFXButton layoutY="217.0" prefHeight="35.0" prefWidth="141.0" styleClass="colorChange" stylesheets="@../../css/style.css" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="1.0" layoutY="364.0" prefHeight="35.0" prefWidth="141.0" styleClass="colorChange" stylesheets="@../../css/style.css" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="1.0" layoutY="42.0" prefHeight="35.0" prefWidth="141.0" styleClass="colorChange" stylesheets="@../../css/style.css" text="Dash" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="52.0" fitWidth="142.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assests/www.dinemore.lk.logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutY="77.0" prefHeight="35.0" prefWidth="141.0" styleClass="colorChange" stylesheets="@../../css/style.css" text="Customers" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="112.0" prefHeight="35.0" prefWidth="141.0" styleClass="colorChange" stylesheets="@../../css/style.css" text="Tel Operators" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="2.0" layoutY="147.0" prefHeight="35.0" prefWidth="141.0" styleClass="colorChange" stylesheets="@../../css/style.css" text="Chefs" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="182.0" prefHeight="35.0" prefWidth="141.0" styleClass="colorChange" stylesheets="@../../css/style.css" text="Riders" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="252.0" prefHeight="35.0" prefWidth="141.0" styleClass="colorChange" stylesheets="@../../css/style.css" text="Reports" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutY="287.0" prefHeight="35.0" prefWidth="141.0" styleClass="colorChange" stylesheets="@../../css/style.css" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="143.0" prefHeight="403.0" prefWidth="619.0" style="-fx-background-color: C5D4C8;" />
+   </children>
+</AnchorPane>

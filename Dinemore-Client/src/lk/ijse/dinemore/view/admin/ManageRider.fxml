@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="458.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.admin.ManageTelOperatorController">
+<AnchorPane prefHeight="458.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.admin.ManageRiderController">
    <children>
-      <Label layoutY="-1.0" prefHeight="40.0" prefWidth="619.0" style="-fx-background-color: grey;" text="Manage Tel Operator" textFill="WHITE">
+      <Label layoutY="-1.0" prefHeight="40.0" prefWidth="619.0" style="-fx-background-color: grey;" text="Manage Rider" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -34,7 +34,7 @@
           <TableColumn prefWidth="75.0" text="ID" />
           <TableColumn prefWidth="136.0" text="Name" />
             <TableColumn prefWidth="136.0" text="Address" />
-            <TableColumn prefWidth="136.0" text="NIC" />
+            <TableColumn prefWidth="136.0" text="License No:" />
             <TableColumn prefWidth="136.0" text="Mobile No:" />
         </columns>
       </TableView>
@@ -59,7 +59,7 @@
             <Font size="12.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="386.0" layoutY="124.0" prefHeight="26.0" prefWidth="217.0" promptText="NIC" styleClass="text-field" unFocusColor="BLACK">
+      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="386.0" layoutY="124.0" prefHeight="26.0" prefWidth="217.0" promptText="Licence Number" styleClass="text-field" unFocusColor="BLACK">
          <font>
             <Font size="12.0" />
          </font>

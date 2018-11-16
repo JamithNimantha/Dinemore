@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="458.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.admin.ManageMenu">
+   <children>
+      <Label layoutY="-1.0" prefHeight="40.0" prefWidth="619.0" style="-fx-background-color: grey;" text="Manage Menu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assests/icon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </Label>
+      <TableView layoutY="258.0" prefHeight="227.0" prefWidth="609.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="170.0" text="Name" />
+            <TableColumn prefWidth="225.0" text="Description" />
+            <TableColumn prefWidth="138.0" text="Price" />
+        </columns>
+      </TableView>
+      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="14.0" layoutY="68.0" prefHeight="26.0" prefWidth="117.0" promptText="ID" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="144.0" layoutY="68.0" prefHeight="26.0" prefWidth="329.0" promptText="Name" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </JFXTextField>
+      <TextField layoutX="298.0" layoutY="176.0" prefHeight="28.0" prefWidth="217.0" promptText="By Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="523.0" layoutY="174.0" prefHeight="26.0" prefWidth="78.0" styleClass="button-search" stylesheets="@../../css/style.css" text="Search" />
+      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="13.0" layoutY="124.0" prefHeight="26.0" prefWidth="358.0" promptText="Description" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="386.0" layoutY="124.0" prefHeight="26.0" prefWidth="217.0" promptText="Price" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="13.0" layoutY="174.0" prefHeight="30.0" prefWidth="86.0" styleClass="button-save" stylesheets="@../../css/style.css" text="Save" />
+      <JFXButton layoutX="107.0" layoutY="174.0" prefHeight="30.0" prefWidth="86.0" styleClass="button-update" stylesheets="@../../css/style.css" text="Update" />
+      <JFXButton layoutX="201.0" layoutY="174.0" prefHeight="30.0" prefWidth="86.0" styleClass="button-remove" stylesheets="@../../css/style.css" text="Remove" />
+   </children>
+</AnchorPane>

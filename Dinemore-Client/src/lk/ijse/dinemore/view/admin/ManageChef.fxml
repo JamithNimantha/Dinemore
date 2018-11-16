@@ -12,10 +12,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="458.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.admin.ManageTelOperatorController">
    <children>
-      <Label layoutY="-1.0" prefHeight="40.0" prefWidth="619.0" style="-fx-background-color: grey;" text="Manage Tel Operator" textFill="WHITE">
+      <Label layoutY="-1.0" prefHeight="40.0" prefWidth="619.0" style="-fx-background-color: grey;" text="Manage Chef" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

@@ -10,6 +10,11 @@
     /*-fx-prompt-text-fill: white;*/
     /*-fx-font-weight: bold;*/
 /*}*/
+
+.dash-button{
+
+}
+
 .button-save{
     -fx-background-color: #ffffff;
     -fx-border-color: #0d9035;

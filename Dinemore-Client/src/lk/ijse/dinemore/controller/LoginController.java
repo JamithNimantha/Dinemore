@@ -42,6 +42,7 @@ public class LoginController implements Initializable {
             Scene scene = new Scene(parent);
             stage.setResizable(false);
             stage.setScene(scene);
+            stage.setTitle("Admin Dash Board");
             stage.show();
         }if (value.equals("Chef")){
             Parent parent = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dinemore/view/chef/ChefDash.fxml"));

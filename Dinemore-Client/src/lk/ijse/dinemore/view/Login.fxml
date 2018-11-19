@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="477.0" prefWidth="427.0" style="-fx-background-color: ed0023;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.LoginController">
+<AnchorPane prefHeight="477.0" prefWidth="427.0" style="-fx-background-color: #46484c;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.controller.LoginController">
    <children>
-      <JFXTextField fx:id="txtUsername" focusColor="#f2f2f2" labelFloat="true" layoutX="127.0" layoutY="168.0" prefHeight="26.0" prefWidth="197.0" promptText="username" stylesheets="@../css/style.css" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtUsername" focusColor="#f2f2f2" labelFloat="true" layoutX="127.0" layoutY="168.0" prefHeight="26.0" prefWidth="197.0" promptText="username" styleClass="text-field" stylesheets="@../css/style.css" unFocusColor="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="btnSignIn" layoutX="94.0" layoutY="362.0" onAction="#btnSignInOnAction" prefHeight="48.0" prefWidth="263.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;" text="Sign In" textFill="#c91e1e">
+      <JFXButton fx:id="btnSignIn" layoutX="94.0" layoutY="362.0" onAction="#btnSignInOnAction" prefHeight="48.0" prefWidth="263.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;" text="Sign In" textFill="#46484c">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -35,20 +35,24 @@
       </ImageView>
       <Label layoutX="145.0" layoutY="428.0" prefHeight="24.0" prefWidth="139.0" styleClass="text-field" stylesheets="@../css/style.css" text="Forgot password?" textFill="#f5f0f0" underline="true" />
       <JFXComboBox fx:id="cmbUserRole" focusColor="WHITE" labelFloat="true" layoutX="124.0" layoutY="274.0" prefHeight="26.0" prefWidth="150.0" promptText="User Role" styleClass="text-field" stylesheets="@../css/style.css" unFocusColor="WHITE" />
-      <ImageView fitHeight="126.0" fitWidth="419.0" layoutX="5.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assests/www.dinemore.lk.logo.png" />
-         </image>
-      </ImageView>
       <JFXCheckBox checkedColor="WHITE" layoutX="94.0" layoutY="325.0" text="Remember Me" textFill="WHITE" unCheckedColor="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXCheckBox>
-      <JFXPasswordField fx:id="txtPassword" focusColor="WHITE" labelFloat="true" layoutX="124.0" layoutY="224.0" prefHeight="26.0" prefWidth="204.0" promptText="password" stylesheets="@../css/style.css" unFocusColor="WHITE">
+      <JFXPasswordField fx:id="txtPassword" focusColor="WHITE" labelFloat="true" layoutX="124.0" layoutY="224.0" prefHeight="26.0" prefWidth="204.0" promptText="password" styleClass="text-field" stylesheets="@../css/style.css" unFocusColor="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXPasswordField>
+      <AnchorPane layoutX="24.0" layoutY="21.0" prefHeight="103.0" prefWidth="375.0">
+         <children>
+            <ImageView fitHeight="113.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/www.dinemore.lk.logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

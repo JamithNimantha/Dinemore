@@ -1,24 +1,13 @@
-package lk.ijse.dinemore.entity;
+package lk.ijse.dinemore.model;
 
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "chef")
-public class Chef {
-    @Id
+public class ChefDTO {
     private int id;
     private String name;
     private String mobile;
     private String address;
     private String nic;
 
-    public Chef() {
-    }
-
-    public Chef(int id, String name, String mobile, String address, String nic) {
+    public ChefDTO(int id, String name, String mobile, String address, String nic) {
         this.id = id;
         this.name = name;
         this.mobile = mobile;
@@ -68,7 +57,7 @@ public class Chef {
 
     @Override
     public String toString() {
-        return "Chef{" +
+        return "ChefDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", mobile='" + mobile + '\'' +

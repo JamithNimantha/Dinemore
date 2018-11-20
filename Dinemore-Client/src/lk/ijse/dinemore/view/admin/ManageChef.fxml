@@ -29,7 +29,7 @@
             <Insets left="15.0" />
          </padding>
       </Label>
-      <TableView layoutY="258.0" prefHeight="227.0" prefWidth="609.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+      <TableView fx:id="tblChef" layoutY="258.0" prefHeight="227.0" prefWidth="609.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
         <columns>
           <TableColumn prefWidth="75.0" text="ID" />
           <TableColumn prefWidth="136.0" text="Name" />
@@ -38,39 +38,39 @@
             <TableColumn prefWidth="136.0" text="Mobile No:" />
         </columns>
       </TableView>
-      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="14.0" layoutY="68.0" prefHeight="26.0" prefWidth="117.0" promptText="ID" styleClass="text-field" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtId" focusColor="#0541e4" labelFloat="true" layoutX="14.0" layoutY="68.0" prefHeight="26.0" prefWidth="117.0" promptText="ID" styleClass="text-field" unFocusColor="BLACK">
          <font>
             <Font size="12.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="144.0" layoutY="68.0" prefHeight="26.0" prefWidth="250.0" promptText="Name" styleClass="text-field" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtName" focusColor="#0541e4" labelFloat="true" layoutX="144.0" layoutY="68.0" prefHeight="26.0" prefWidth="250.0" promptText="Name" styleClass="text-field" unFocusColor="BLACK">
          <font>
             <Font size="12.0" />
          </font>
       </JFXTextField>
-      <TextField layoutX="298.0" layoutY="176.0" prefHeight="28.0" prefWidth="217.0" promptText="By Name">
+      <TextField fx:id="txtSearch" layoutX="298.0" layoutY="176.0" onAction="#txtSearchOnAction" prefHeight="28.0" prefWidth="217.0" promptText="By Name">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <JFXButton layoutX="523.0" layoutY="174.0" prefHeight="26.0" prefWidth="78.0" styleClass="button-search" stylesheets="@../../css/style.css" text="Search" />
-      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="13.0" layoutY="124.0" prefHeight="26.0" prefWidth="358.0" promptText="Address" styleClass="text-field" unFocusColor="BLACK">
+      <JFXButton fx:id="btnSearch" layoutX="523.0" layoutY="174.0" onAction="#txtSearchOnAction" prefHeight="26.0" prefWidth="78.0" styleClass="button-search" stylesheets="@../../css/style.css" text="Search" />
+      <JFXTextField fx:id="txtAddress" focusColor="#0541e4" labelFloat="true" layoutX="13.0" layoutY="124.0" prefHeight="26.0" prefWidth="358.0" promptText="Address" styleClass="text-field" unFocusColor="BLACK">
          <font>
             <Font size="12.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="386.0" layoutY="124.0" prefHeight="26.0" prefWidth="217.0" promptText="NIC" styleClass="text-field" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtNIC" focusColor="#0541e4" labelFloat="true" layoutX="386.0" layoutY="124.0" prefHeight="26.0" prefWidth="217.0" promptText="NIC" styleClass="text-field" unFocusColor="BLACK">
          <font>
             <Font size="12.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="#0541e4" labelFloat="true" layoutX="413.0" layoutY="68.0" prefHeight="26.0" prefWidth="190.0" promptText="Mobile" styleClass="text-field" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtMobile" focusColor="#0541e4" labelFloat="true" layoutX="413.0" layoutY="68.0" prefHeight="26.0" prefWidth="190.0" promptText="Mobile" styleClass="text-field" unFocusColor="BLACK">
          <font>
             <Font size="12.0" />
          </font>
       </JFXTextField>
-      <JFXButton layoutX="13.0" layoutY="174.0" prefHeight="30.0" prefWidth="86.0" styleClass="button-save" stylesheets="@../../css/style.css" text="Save" />
-      <JFXButton layoutX="107.0" layoutY="174.0" prefHeight="30.0" prefWidth="86.0" styleClass="button-update" stylesheets="@../../css/style.css" text="Update" />
-      <JFXButton layoutX="201.0" layoutY="174.0" prefHeight="30.0" prefWidth="86.0" styleClass="button-remove" stylesheets="@../../css/style.css" text="Remove" />
+      <JFXButton fx:id="btnSave" layoutX="13.0" layoutY="174.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="86.0" styleClass="button-save" stylesheets="@../../css/style.css" text="Save" />
+      <JFXButton fx:id="btnUpdate" layoutX="107.0" layoutY="174.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="86.0" styleClass="button-update" stylesheets="@../../css/style.css" text="Update" />
+      <JFXButton fx:id="btnRemove" layoutX="201.0" layoutY="174.0" onAction="#btnRemoveOnAction" prefHeight="30.0" prefWidth="86.0" styleClass="button-remove" stylesheets="@../../css/style.css" text="Remove" />
    </children>
 </AnchorPane>

@@ -4,7 +4,7 @@ import java.rmi.Remote;
 
 public interface ServiceFactory extends Remote {
     public enum ServiceType{
-        CHEF,MEMU
+        CHEF,MENU
     }
 
     public SuperService getService(ServiceType serviceType) throws Exception ;

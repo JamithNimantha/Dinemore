@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.ijse.dinemore.model.ChefDTO;
+import lk.ijse.dinemore.service.custom.ChefService;
 
 public class ManageChefController {
 
@@ -42,6 +43,12 @@ public class ManageChefController {
 
     @FXML
     private JFXButton btnRemove;
+
+    private ChefService chefService;
+
+    public ManageChefController() {
+
+    }
 
     @FXML
     void btnRemoveOnAction(ActionEvent event) {

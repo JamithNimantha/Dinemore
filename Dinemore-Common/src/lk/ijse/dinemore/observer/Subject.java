@@ -3,5 +3,9 @@ package lk.ijse.dinemore.observer;
 import java.rmi.Remote;
 
 public interface Subject extends Remote {
-    public void registerOb
+    public void registerObserver(Observer observer) throws Exception;
+
+    public void unregisterObserver(Observer observer) throws Exception;
+
+    public void notifyObservers() throws Exception;
 }

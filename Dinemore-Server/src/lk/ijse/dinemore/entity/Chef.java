@@ -2,6 +2,7 @@ package lk.ijse.dinemore.entity;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,17 +10,19 @@ import javax.persistence.Table;
 @Table(name = "chef")
 public class Chef {
     @Id
+    @GeneratedValue
     private int id;
     private String name;
     private String mobile;
     private String address;
     private String nic;
 
+  //  @OneToOne(mappedBy = "chef",cascade = ALL)
+
     public Chef() {
     }
 
-    public Chef(int id, String name, String mobile, String address, String nic) {
-        this.id = id;
+    public Chef(String name, String mobile, String address, String nic) {
         this.name = name;
         this.mobile = mobile;
         this.address = address;

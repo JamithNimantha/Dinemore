@@ -1,4 +1,4 @@
-package lk.ijse.dinemore.business.Custom;
+package lk.ijse.dinemore.business.custom;
 
 import lk.ijse.dinemore.business.SuperBO;
 import lk.ijse.dinemore.model.ChefDTO;

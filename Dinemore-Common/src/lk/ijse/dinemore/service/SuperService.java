@@ -1,8 +1,6 @@
 package lk.ijse.dinemore.service;
 
-import lk.ijse.dinemore.reservation.Reservation;
-
 import java.rmi.Remote;
 
-public interface SuperService extends Reservation, Remote {
+public interface SuperService extends Remote {
 }

@@ -38,7 +38,7 @@
             <TableColumn prefWidth="136.0" text="Mobile No:" />
         </columns>
       </TableView>
-      <JFXTextField fx:id="txtId" focusColor="#0541e4" labelFloat="true" layoutX="14.0" layoutY="68.0" prefHeight="26.0" prefWidth="117.0" promptText="ID" styleClass="text-field" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtId" editable="false" focusColor="#0541e4" labelFloat="true" layoutX="14.0" layoutY="68.0" prefHeight="26.0" prefWidth="117.0" promptText="ID" styleClass="text-field" unFocusColor="BLACK">
          <font>
             <Font size="12.0" />
          </font>

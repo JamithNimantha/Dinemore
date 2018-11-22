@@ -1,11 +1,23 @@
 package lk.ijse.dinemore.model;
 
-public class ChefDTO {
+import java.io.Serializable;
+
+public class ChefDTO extends SuperDTO {
     private int id;
     private String name;
     private String mobile;
     private String address;
     private String nic;
+
+    public ChefDTO() {
+    }
+
+    public ChefDTO(String name, String mobile, String address, String nic) {
+        this.name = name;
+        this.mobile = mobile;
+        this.address = address;
+        this.nic = nic;
+    }
 
     public ChefDTO(int id, String name, String mobile, String address, String nic) {
         this.id = id;

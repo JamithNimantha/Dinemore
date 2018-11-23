@@ -59,11 +59,6 @@ public class ManageChefController implements Initializable{
 
     private void getAllChefs(){
         try {
-            tblChef.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("id"));
-            tblChef.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("name"));
-            tblChef.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("mobile"));
-            tblChef.getColumns().get(3).setCellValueFactory(new PropertyValueFactory<>("address"));
-            tblChef.getColumns().get(4).setCellValueFactory(new PropertyValueFactory<>("nic"));
             List<ChefDTO> allChefs = chefService.getAllChefs();
             tblChef.setItems(FXCollections.observableArrayList(allChefs));
         } catch (Exception e) {
@@ -78,7 +73,13 @@ public class ManageChefController implements Initializable{
         } catch (Exception e) {
             e.printStackTrace();
         }
+        tblChef.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("id"));
+        tblChef.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("name"));
+        tblChef.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("mobile"));
+        tblChef.getColumns().get(3).setCellValueFactory(new PropertyValueFactory<>("address"));
+        tblChef.getColumns().get(4).setCellValueFactory(new PropertyValueFactory<>("nic"));
         getAllChefs();
+        txtName.requestFocus();
     }
     @FXML
     void btnRemoveOnAction(ActionEvent event) {
@@ -86,6 +87,8 @@ public class ManageChefController implements Initializable{
             boolean b = chefService.deleteChef(txtId.getText());
             if (b){
                 System.out.println("chef deleted");
+                getAllChefs();
+                clearFeilds();
             }else {
                 System.out.println("chef not deleted");
             }
@@ -107,6 +110,8 @@ public class ManageChefController implements Initializable{
             boolean result = chefService.addChef(chefDTO);
             if (result){
                 System.out.println("Chef added...");
+                getAllChefs();
+                clearFeilds();
             }else {
                 System.out.println("Error Occured...");
             }
@@ -128,6 +133,8 @@ public class ManageChefController implements Initializable{
             ));
             if (isUpdated){
                 System.out.println("Chef updated...");
+                getAllChefs();
+                clearFeilds();
             }else {
                 System.out.println("Error Occured...");
             }
@@ -151,7 +158,25 @@ public class ManageChefController implements Initializable{
     }
     @FXML
     void txtSearchOnAction(ActionEvent event) {
+        try {
+            ChefDTO chefDTO = chefService.searchChef(txtSearch.getText());
+            if (chefDTO!=null){
+                tblChef.setItems(FXCollections.observableArrayList(chefDTO));
+            }else{
+                System.out.println("Error Occured while searching...");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
+    }
+    private void clearFeilds(){
+        txtId.clear();
+        txtName.clear();
+        txtAddress.clear();
+        txtNIC.clear();
+        txtMobile.clear();
+        txtSearch.clear();
     }
 
 

@@ -48,12 +48,12 @@
             <Font size="12.0" />
          </font>
       </JFXTextField>
-      <TextField fx:id="txtSearch" layoutX="298.0" layoutY="176.0" onAction="#txtSearchOnAction" prefHeight="28.0" prefWidth="217.0" promptText="By Name">
+      <TextField fx:id="txtSearch" layoutX="307.0" layoutY="6.0" onAction="#txtSearchOnAction" prefHeight="28.0" prefWidth="217.0" promptText="By Name">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <JFXButton fx:id="btnSearch" layoutX="523.0" layoutY="174.0" onAction="#txtSearchOnAction" prefHeight="26.0" prefWidth="78.0" styleClass="button-search" stylesheets="@../../css/style.css" text="Search" />
+      <JFXButton fx:id="btnSearch" layoutX="532.0" layoutY="4.0" onAction="#txtSearchOnAction" prefHeight="26.0" prefWidth="78.0" styleClass="button-search" stylesheets="@../../css/style.css" text="Search" />
       <JFXTextField fx:id="txtAddress" focusColor="#0541e4" labelFloat="true" layoutX="13.0" layoutY="124.0" prefHeight="26.0" prefWidth="358.0" promptText="Address" styleClass="text-field" unFocusColor="BLACK">
          <font>
             <Font size="12.0" />
@@ -69,8 +69,8 @@
             <Font size="12.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="btnSave" layoutX="13.0" layoutY="174.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="86.0" styleClass="button-save" stylesheets="@../../css/style.css" text="Save" />
-      <JFXButton fx:id="btnUpdate" layoutX="107.0" layoutY="174.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="86.0" styleClass="button-update" stylesheets="@../../css/style.css" text="Update" />
-      <JFXButton fx:id="btnRemove" layoutX="201.0" layoutY="174.0" onAction="#btnRemoveOnAction" prefHeight="30.0" prefWidth="86.0" styleClass="button-remove" stylesheets="@../../css/style.css" text="Remove" />
+      <JFXButton fx:id="btnSave" layoutX="314.0" layoutY="174.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="86.0" styleClass="button-save" stylesheets="@../../css/style.css" text="Save" />
+      <JFXButton fx:id="btnUpdate" layoutX="408.0" layoutY="174.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="86.0" styleClass="button-update" stylesheets="@../../css/style.css" text="Update" />
+      <JFXButton fx:id="btnRemove" layoutX="502.0" layoutY="174.0" onAction="#btnRemoveOnAction" prefHeight="30.0" prefWidth="86.0" styleClass="button-remove" stylesheets="@../../css/style.css" text="Remove" />
    </children>
 </AnchorPane>

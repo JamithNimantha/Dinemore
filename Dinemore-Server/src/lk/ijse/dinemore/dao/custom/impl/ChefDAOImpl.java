@@ -30,21 +30,55 @@ public class ChefDAOImpl implements ChefDAO {
 
     @Override
     public boolean update(Chef entity) throws Exception {
-        return false;
+        try (Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            Chef chef = session.get(Chef.class, entity.getId());
+            chef.setName(entity.getName());
+            chef.setMobile(entity.getMobile());
+            chef.setAddress(entity.getAddress());
+            chef.setNic(entity.getNic());
+            session.getTransaction().commit();
+        }catch (HibernateException e){
+            return false;
+        }
+        return true;
     }
 
     @Override
     public boolean delete(String s) throws Exception {
-        return false;
+        try (Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+            Chef chef = session.get(Chef.class, s);
+            session.remove(chef);
+            session.getTransaction().commit();
+        }catch (HibernateException e){
+            return false;
+        }
+        return true;
     }
 
     @Override
     public Chef search(String s) throws Exception {
+        Chef chef;
+//        try (Session session = sessionFactory.openSession()) {
+//            session.beginTransaction();
+//            session.createQuery(s)
+//
+//        }
         return null;
     }
 
     @Override
     public List<Chef> getAll() throws Exception {
-        return null;
+        List list;
+        try (Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+           // list = session.createQuery("from chef").list();
+            list = session.createCriteria(Chef.class).list();
+            session.getTransaction().commit();
+        }catch (HibernateException e){
+            return null;
+        }
+        return list;
     }
 }

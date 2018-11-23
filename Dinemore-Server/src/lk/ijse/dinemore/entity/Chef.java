@@ -22,6 +22,14 @@ public class Chef {
     public Chef() {
     }
 
+    public Chef(int id, String name, String mobile, String address, String nic) {
+        this.id = id;
+        this.name = name;
+        this.mobile = mobile;
+        this.address = address;
+        this.nic = nic;
+    }
+
     public Chef(String name, String mobile, String address, String nic) {
         this.name = name;
         this.mobile = mobile;

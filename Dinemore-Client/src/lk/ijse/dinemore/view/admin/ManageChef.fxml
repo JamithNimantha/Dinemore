@@ -29,7 +29,7 @@
             <Insets left="15.0" />
          </padding>
       </Label>
-      <TableView fx:id="tblChef" layoutY="258.0" prefHeight="227.0" prefWidth="609.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+      <TableView fx:id="tblChef" layoutY="258.0" onMouseClicked="#tblChefOnClicked" prefHeight="227.0" prefWidth="609.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
         <columns>
           <TableColumn prefWidth="75.0" text="ID" />
           <TableColumn prefWidth="136.0" text="Name" />

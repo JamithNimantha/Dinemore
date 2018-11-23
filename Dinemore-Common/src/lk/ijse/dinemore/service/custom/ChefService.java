@@ -10,6 +10,8 @@ public interface ChefService extends SuperService {
 
     public List<ChefDTO> getAllChefs() throws Exception;
 
+    public ChefDTO searchChef(String id)throws Exception;
+
     public boolean deleteChef(String id) throws Exception;
 
     public boolean updateChef(ChefDTO chefDTO) throws Exception;

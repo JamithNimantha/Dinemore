@@ -12,6 +12,8 @@ public interface ChefBO extends SuperBO {
 
     public boolean deleteChef(String id) throws Exception;
 
+    public ChefDTO searchChef(String id)throws Exception;
+
     public List<ChefDTO> getAllChefs() throws Exception;
 
 }

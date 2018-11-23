@@ -28,12 +28,17 @@ public class ChefServiceImpl extends UnicastRemoteObject implements ChefService 
     }
 
     @Override
+    public ChefDTO searchChef(String id) throws Exception {
+        return chefBO.searchChef(id);
+    }
+
+    @Override
     public boolean deleteChef(String id) throws Exception {
-        return false;
+        return chefBO.deleteChef(id);
     }
 
     @Override
     public boolean updateChef(ChefDTO chefDTO) throws Exception {
-        return false;
+        return chefBO.updateChef(chefDTO);
     }
 }

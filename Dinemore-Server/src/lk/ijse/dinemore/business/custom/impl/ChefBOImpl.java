@@ -9,35 +9,19 @@ import lk.ijse.dinemore.resource.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChefBOImpl implements ChefBO {
-   // private SessionFactory sessionFactory;
 
     private ChefDAO chefDAO;
 
     public ChefBOImpl(){
-        //sessionFactory = HibernateUtil.getSessionFactory();
         chefDAO= new ChefDAOImpl();
     }
 
     @Override
     public boolean addChef(ChefDTO chefDTO) throws Exception {
-//        boolean isSaved=false;
-//        try (Session session = sessionFactory.openSession()) {
-//            session.beginTransaction();
-//            System.out.println("boimpl"+chefDTO);
-//            ChefDTO dto = new ChefDTO(
-//                    chefDTO.getName(),
-//                    chefDTO.getMobile(),
-//                    chefDTO.getAddress(),
-//                    chefDTO.getNic());
-//            session.save(dto);
-//            isSaved = (session.save(dto)!= null);
-//            session.getTransaction().commit();
-//           // session.flush();
-//            return isSaved;
-//        }
         return chefDAO.save(new Chef(
                 chefDTO.getName(),
                 chefDTO.getMobile(),
@@ -48,16 +32,42 @@ public class ChefBOImpl implements ChefBO {
 
     @Override
     public boolean updateChef(ChefDTO chefDTO) throws Exception {
-        return false;
+        return chefDAO.update(new Chef(
+                chefDTO.getId(),
+                chefDTO.getName(),
+                chefDTO.getMobile(),
+                chefDTO.getAddress(),
+                chefDTO.getNic()
+        ));
     }
 
     @Override
     public boolean deleteChef(String id) throws Exception {
-        return false;
+        return chefDAO.delete(id);
+    }
+
+    @Override
+    public ChefDTO searchChef(String id) throws Exception {
+        Chef search = chefDAO.search(id);
+        if (search!=null){
+            return new ChefDTO(
+                    search.getId(),
+                    search.getName(),
+                    search.getMobile(),
+                    search.getAddress(),
+                    search.getNic()
+            );
+        }
+        return null;
     }
 
     @Override
     public List<ChefDTO> getAllChefs() throws Exception {
-        return null;
+        List<Chef> all = chefDAO.getAll();
+        List<ChefDTO> chefDTOS  = new ArrayList<>();
+        for (Chef c:all) {
+            chefDTOS.add(new ChefDTO(c.getId(),c.getName(),c.getMobile(),c.getAddress(),c.getNic()));
+        }
+        return chefDTOS;
     }
 }

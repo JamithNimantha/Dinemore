@@ -11,6 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import lk.ijse.dinemore.common.Notification;
 import lk.ijse.dinemore.model.RiderDTO;
 import lk.ijse.dinemore.proxy.ProxyHandler;
 import lk.ijse.dinemore.service.ServiceFactory;
@@ -99,11 +100,11 @@ public class ManageRiderController implements Initializable {
             boolean isDeleted = riderService.deleteRider(txtID.getText());
             System.out.println(isDeleted);
             if (isDeleted){
-                System.out.println("removed");
+                Notification.createSuccesful("Removed Success","Rider Removed Successfully");
                 loadTable();
                 clearFeilds();
             }else {
-                System.out.println("not removed");
+                Notification.createError("Cannot be Removed","Error while Removing Rider");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -120,13 +121,12 @@ public class ManageRiderController implements Initializable {
                     txtMobile.getText(),
                     txtNIC.getText()
             ));
-            System.out.println(isSaved);
             if (isSaved){
-                System.out.println("added");
+                Notification.createSuccesful("Added Success","Rider Added Successfully");
                 loadTable();
                 clearFeilds();
             }else {
-                System.out.println("not added");
+                Notification.createError("Cannot be Added","Error while adding Rider");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -145,11 +145,11 @@ public class ManageRiderController implements Initializable {
                     txtNIC.getText()
             ));
             if (isUpdated){
-                System.out.println("updated");
+                Notification.createSuccesful("Updated Success","Rider Updated Successfully");
                 loadTable();
                 clearFeilds();
             }else {
-                System.out.println("not updated");
+                Notification.createError("Cannot be Updated","Error while Updating Rider");
             }
         } catch (Exception e) {
             e.printStackTrace();

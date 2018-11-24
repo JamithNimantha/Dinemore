@@ -11,6 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import lk.ijse.dinemore.common.Notification;
 import lk.ijse.dinemore.model.ChefDTO;
 import lk.ijse.dinemore.proxy.ProxyHandler;
 import lk.ijse.dinemore.service.ServiceFactory;
@@ -84,11 +85,11 @@ public class ManageChefController implements Initializable{
         try {
             boolean b = chefService.deleteChef(txtId.getText());
             if (b){
-                System.out.println("chef deleted");
+                Notification.createSuccesful("Removed Success","Chef Removed Successfully");
                 getAllChefs();
                 clearFeilds();
             }else {
-                System.out.println("chef not deleted");
+                Notification.createError("Cannot be Removed","Error while Removing Chef");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -107,10 +108,11 @@ public class ManageChefController implements Initializable{
             );
             boolean result = chefService.addChef(chefDTO);
             if (result){
-                System.out.println("Chef added...");
+                Notification.createSuccesful("Added Success","Chef Added Successfully");
                 getAllChefs();
                 clearFeilds();
             }else {
+                Notification.createError("Cannot be Added","Error while adding Chef");
                 System.out.println("Error Occured...");
             }
         } catch (Exception e) {
@@ -130,11 +132,11 @@ public class ManageChefController implements Initializable{
                     txtNIC.getText()
             ));
             if (isUpdated){
-                System.out.println("Chef updated...");
+                Notification.createSuccesful("Updated Success","Chef Updatef Successfully");
                 getAllChefs();
                 clearFeilds();
             }else {
-                System.out.println("Error Occured...");
+                Notification.createError("Cannot be Updated","Error while Updating Chef");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -161,7 +163,7 @@ public class ManageChefController implements Initializable{
             if (chefDTO!=null){
                 tblChef.setItems(FXCollections.observableArrayList(chefDTO));
             }else{
-                System.out.println("Error Occured while searching...");
+                Notification.createError("Cannot be Searched","Error while Searching ");
             }
         } catch (Exception e) {
             e.printStackTrace();

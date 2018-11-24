@@ -13,8 +13,7 @@ public class TelOperatorServiceImpl extends UnicastRemoteObject implements TelOp
     private TelOperatorBO telOperatorBO;
 
     public TelOperatorServiceImpl() throws RemoteException {
-//        telOperatorBO= (TelOperatorBO) BOFactory.getInstance().getBOTypes(BOFactory.BOTypes.TELOPERATOR);
-        telOperatorBO= new TelOperatorBOImpl();
+       telOperatorBO= (TelOperatorBO) BOFactory.getInstance().getBOTypes(BOFactory.BOTypes.TELOPERATOR);
     }
 
     @Override

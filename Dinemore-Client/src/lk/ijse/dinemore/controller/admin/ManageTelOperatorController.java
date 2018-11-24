@@ -10,12 +10,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import lk.ijse.dinemore.common.Notification;
 import lk.ijse.dinemore.model.TelOperatorDTO;
 import lk.ijse.dinemore.proxy.ProxyHandler;
 import lk.ijse.dinemore.service.ServiceFactory;
-import lk.ijse.dinemore.service.SuperService;
 import lk.ijse.dinemore.service.custom.TelOperatorService;
-
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -88,10 +87,10 @@ public class ManageTelOperatorController implements Initializable {
         try {
             boolean isDeleted = telOperatorService.deleteTelOperator(txtID.getText());
             if (isDeleted){
-                System.out.println("Tel  deleted...");
+                Notification.createSuccesful("Removed Success","Tel Operator Removed Successfully");
                 loadTable();
             }else {
-                System.out.println("not deleted");
+                Notification.createError("Cannot be Removed","Error while Removing Tel Operator");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -108,11 +107,11 @@ public class ManageTelOperatorController implements Initializable {
                     txtNIC.getText()
             ));
             if (isAdded){
-                System.out.println("added");
+                Notification.createSuccesful("Added Success","Tel Operator Added Successfully");
                 loadTable();
 
             }else {
-                System.out.println("not added");
+                Notification.createError("Cannot be Added","Error while adding Tel Operator");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -131,10 +130,10 @@ public class ManageTelOperatorController implements Initializable {
                     txtNIC.getText()
             ));
             if (isUpdated){
-                System.out.println("updated");
+                Notification.createSuccesful("Updated Success","Tel Operator Updated Successfully");
                 loadTable();
             }else {
-                System.out.println("not updated");
+                Notification.createError("Cannot be Updated","Error while updating Tel Operator");
             }
         } catch (Exception e) {
             e.printStackTrace();

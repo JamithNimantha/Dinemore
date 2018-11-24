@@ -10,6 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import lk.ijse.dinemore.common.Notification;
 import lk.ijse.dinemore.model.MenuDTO;
 import lk.ijse.dinemore.proxy.ProxyHandler;
 import lk.ijse.dinemore.service.ServiceFactory;
@@ -83,11 +84,11 @@ public class ManageMenuController implements Initializable {
         try {
             boolean isDeleted = menuService.deleteMenu(txtID.getText());
             if (isDeleted){
-                System.out.println("menu deleted");
+                Notification.createSuccesful("Remove Success","Menu Remove Successfully");
                 getAllChefs();
                 clearFeilds();
             }else {
-                System.out.println("menu not deleted..");
+                Notification.createError("Cannot be Removed","Error while removing Menu");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -104,11 +105,11 @@ public class ManageMenuController implements Initializable {
                     Double.parseDouble(txtPrice.getText())
             ));
             if (isAdded){
-                System.out.println("Added");
+                Notification.createSuccesful("Added Success","Menu Added Successfully");
                 getAllChefs();
                 clearFeilds();
             }else {
-                System.out.println("menu not added");
+                Notification.createError("Cannot be Added","Error while adding Menu");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -130,11 +131,11 @@ public class ManageMenuController implements Initializable {
                     Double.parseDouble(txtPrice.getText())
             ));
             if (isUpdated){
-                System.out.println("Menu updated...");
+                Notification.createSuccesful("Updated Success","Menu updated Successfully");
                 getAllChefs();
                 clearFeilds();
             }else {
-                System.out.println("Menu not updated");
+                Notification.createError("Cannot be updated","Error while updated Menu");
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lk.ijse.dinemore.common.Notification;
 
 import java.io.IOException;
 import java.net.URL;
@@ -38,12 +39,16 @@ public class LoginController implements Initializable {
         String value = cmbUserRole.getValue();
         Stage stage = (Stage) btnSignIn.getScene().getWindow();
         if (value.equals("Admin")){
-            Parent parent = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dinemore/view/admin/AdminDash.fxml"));
-            Scene scene = new Scene(parent);
-            stage.setResizable(false);
-            stage.setScene(scene);
-            stage.setTitle("Admin Dash Board");
-            stage.show();
+            if (txtUsername.getText().equals("admin") && txtPassword.getText().equals("1234")){
+                Parent parent = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dinemore/view/admin/AdminDash.fxml"));
+                Scene scene = new Scene(parent);
+                stage.setResizable(false);
+                stage.setScene(scene);
+                stage.setTitle("Admin Dash Board");
+                stage.show();
+            }else {
+                Notification.createError("Invalid Login","Incorrect username or password");
+            }
         }if (value.equals("Chef")){
             Parent parent = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dinemore/view/chef/ChefDash.fxml"));
             Scene scene = new Scene(parent);

@@ -87,6 +87,15 @@ public class AdminDashController {
 
     @FXML
     void btnReportOnAction(ActionEvent event) {
+        try {
+            Node child = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dinemore/view/admin/Reports.fxml"));
+            if (!(pnlMain.getChildren().isEmpty())){
+                pnlMain.getChildren().remove(0);
+            }
+            pnlMain.getChildren().add(child);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -109,16 +118,16 @@ public class AdminDashController {
     }
     @FXML
     void btnLogoutOnAction(ActionEvent event) {
-//
-//        try {
-//            Stage stage = new Stage();
-//            Parent parent = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dinemore/view/Login.fxml"));
-//            Scene scene = new Scene(parent);
-//            stage.setScene(scene);
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Stage stage = (Stage) btnLogout.getScene().getWindow();
+            Parent parent = FXMLLoader.load(this.getClass().getResource("/lk/ijse/dinemore/view/Login.fxml"));
+            Scene scene =  new Scene(parent);
+            stage.resizableProperty().setValue(Boolean.FALSE);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
        // Platform.exit();
     }
 

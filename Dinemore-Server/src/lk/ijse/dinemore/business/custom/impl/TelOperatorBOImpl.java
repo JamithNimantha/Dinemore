@@ -24,7 +24,6 @@ public class TelOperatorBOImpl implements TelOperatorBO {
                 telOperatorDTO.getAddress(),
                 telOperatorDTO.getNic()
         ));
-       // return true;
     }
 
     @Override

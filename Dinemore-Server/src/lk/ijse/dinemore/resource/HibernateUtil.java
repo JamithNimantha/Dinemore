@@ -2,6 +2,8 @@ package lk.ijse.dinemore.resource;
 
 import lk.ijse.dinemore.entity.Chef;
 import lk.ijse.dinemore.entity.Menu;
+import lk.ijse.dinemore.entity.Rider;
+import lk.ijse.dinemore.entity.TelOperator;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
@@ -17,6 +19,8 @@ public class HibernateUtil {
         Metadata metadata =new MetadataSources(registry)
                 .addAnnotatedClass(Chef.class)
                 .addAnnotatedClass(Menu.class)
+                //.addAnnotatedClass(TelOperator.class)
+                .addAnnotatedClass(Rider.class)
                 .buildMetadata();
         return metadata.getSessionFactoryBuilder().build();
     }

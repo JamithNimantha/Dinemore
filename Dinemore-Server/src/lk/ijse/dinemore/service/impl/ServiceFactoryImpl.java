@@ -4,6 +4,8 @@ import lk.ijse.dinemore.service.ServiceFactory;
 import lk.ijse.dinemore.service.SuperService;
 import lk.ijse.dinemore.service.custom.impl.ChefServiceImpl;
 import lk.ijse.dinemore.service.custom.impl.MenuServiceImpl;
+import lk.ijse.dinemore.service.custom.impl.RiderServiceImpl;
+import lk.ijse.dinemore.service.custom.impl.TelOperatorServiceImpl;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -28,6 +30,10 @@ public class ServiceFactoryImpl extends UnicastRemoteObject implements ServiceFa
                return new ChefServiceImpl();
            case MENU:
                return new MenuServiceImpl();
+           case TELOPERATOR:
+               return new TelOperatorServiceImpl();
+           case RIDER:
+               return new RiderServiceImpl();
            default:
                return null;
        }

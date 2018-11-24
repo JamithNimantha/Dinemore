@@ -1,27 +1,29 @@
 package lk.ijse.dinemore.model;
 
-public class ChefDTO extends SuperDTO {
+import java.io.Serializable;
+
+public class TelOperatorDTO extends SuperDTO {
     private int id;
     private String name;
-    private String mobile;
     private String address;
+    private String mobile;
     private String nic;
 
-    public ChefDTO() {
+    public TelOperatorDTO() {
     }
 
-    public ChefDTO(String name, String mobile, String address, String nic) {
+    public TelOperatorDTO(int id, String name, String address, String mobile, String nic) {
+        this.id = id;
         this.name = name;
-        this.mobile = mobile;
         this.address = address;
+        this.mobile = mobile;
         this.nic = nic;
     }
 
-    public ChefDTO(int id, String name, String mobile, String address, String nic) {
-        this.id = id;
+    public TelOperatorDTO(String name, String address, String mobile, String nic) {
         this.name = name;
-        this.mobile = mobile;
         this.address = address;
+        this.mobile = mobile;
         this.nic = nic;
     }
 
@@ -41,20 +43,20 @@ public class ChefDTO extends SuperDTO {
         this.name = name;
     }
 
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
-
     public String getAddress() {
         return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getNic() {
@@ -67,11 +69,11 @@ public class ChefDTO extends SuperDTO {
 
     @Override
     public String toString() {
-        return "ChefDTO{" +
+        return "TelOperatorDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", mobile='" + mobile + '\'' +
                 ", address='" + address + '\'' +
+                ", mobile='" + mobile + '\'' +
                 ", nic='" + nic + '\'' +
                 '}';
     }

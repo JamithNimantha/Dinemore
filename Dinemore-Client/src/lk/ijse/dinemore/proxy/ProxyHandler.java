@@ -4,6 +4,8 @@ import lk.ijse.dinemore.service.ServiceFactory;
 import lk.ijse.dinemore.service.SuperService;
 import lk.ijse.dinemore.service.custom.ChefService;
 import lk.ijse.dinemore.service.custom.MenuService;
+import lk.ijse.dinemore.service.custom.RiderService;
+import lk.ijse.dinemore.service.custom.TelOperatorService;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -15,6 +17,9 @@ public class ProxyHandler implements ServiceFactory {
     private ServiceFactory serviceFactory;
     private ChefService chefService;
     private MenuService menuService;
+    private TelOperatorService telOperatorService;
+    private RiderService riderService;
+
 
     private ProxyHandler() {
 
@@ -22,6 +27,9 @@ public class ProxyHandler implements ServiceFactory {
             serviceFactory =(ServiceFactory) Naming.lookup("rmi://127.0.0.1:5050/dinemore");
             chefService = (ChefService) serviceFactory.getService(ServiceType.CHEF);
             menuService = (MenuService) serviceFactory.getService(ServiceType.MENU);
+            telOperatorService= (TelOperatorService) serviceFactory.getService(ServiceType.TELOPERATOR);
+            riderService= (RiderService) serviceFactory.getService(ServiceType.RIDER);
+
         } catch (NotBoundException e) {
             e.printStackTrace();
         } catch (MalformedURLException e) {
@@ -47,6 +55,10 @@ public class ProxyHandler implements ServiceFactory {
                 return chefService;
             case MENU:
                 return menuService;
+            case TELOPERATOR:
+                return telOperatorService;
+            case RIDER:
+                return riderService;
              default:
                  return null;
         }

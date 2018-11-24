@@ -59,13 +59,13 @@ public class ChefDAOImpl implements ChefDAO {
 
     @Override
     public Chef search(String s) throws Exception {
-        Chef chef;
+        Chef chef =null;
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
-            SQLQuery sqlQuery = session.createSQLQuery("SELECT * FROM chef WHERE name=:chef_name");
-            sqlQuery.addEntity(Chef.class);
-            sqlQuery.setParameter("chef_name",s);
-            chef = (Chef) sqlQuery.list();
+//            SQLQuery sqlQuery = session.createSQLQuery("SELECT * FROM chef WHERE name=:chef_name");
+//            sqlQuery.addEntity(Chef.class);
+//            sqlQuery.setParameter("chef_name",s);
+//            chef = (Chef) sqlQuery.list();
             session.getTransaction().commit();
 
         }catch (HibernateException e){

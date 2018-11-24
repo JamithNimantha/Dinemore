@@ -15,7 +15,6 @@ import lk.ijse.dinemore.model.ChefDTO;
 import lk.ijse.dinemore.proxy.ProxyHandler;
 import lk.ijse.dinemore.service.ServiceFactory;
 import lk.ijse.dinemore.service.custom.ChefService;
-
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -64,7 +63,6 @@ public class ManageChefController implements Initializable{
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {

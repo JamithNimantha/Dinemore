@@ -85,6 +85,7 @@ public class ManageMenuController implements Initializable {
             if (isDeleted){
                 System.out.println("menu deleted");
                 getAllChefs();
+                clearFeilds();
             }else {
                 System.out.println("menu not deleted..");
             }
@@ -105,6 +106,7 @@ public class ManageMenuController implements Initializable {
             if (isAdded){
                 System.out.println("Added");
                 getAllChefs();
+                clearFeilds();
             }else {
                 System.out.println("menu not added");
             }
@@ -130,6 +132,7 @@ public class ManageMenuController implements Initializable {
             if (isUpdated){
                 System.out.println("Menu updated...");
                 getAllChefs();
+                clearFeilds();
             }else {
                 System.out.println("Menu not updated");
             }
@@ -168,6 +171,13 @@ public class ManageMenuController implements Initializable {
     @FXML
     void txtPriceOnAction(ActionEvent event) {
 
+    }
+    private void clearFeilds(){
+        txtID.clear();
+        txtName.clear();
+        txtDescription.clear();
+        txtPrice.clear();
+        txtSearch.clear();
     }
 
 

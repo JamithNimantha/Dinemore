@@ -1,25 +1,16 @@
-package lk.ijse.dinemore.entity;
+package lk.ijse.dinemore.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "tel_operator")
-public class TelOperator{
-    @Id
-    @GeneratedValue
+public class RiderDTO extends SuperDTO{
     private int id;
     private String name;
     private String address;
     private String mobile;
     private String nic;
 
-    public TelOperator() {
+    public RiderDTO() {
     }
 
-    public TelOperator(int id, String name, String address, String mobile, String nic) {
+    public RiderDTO(int id, String name, String address, String mobile, String nic) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -27,7 +18,7 @@ public class TelOperator{
         this.nic = nic;
     }
 
-    public TelOperator(String name, String address, String mobile, String nic) {
+    public RiderDTO(String name, String address, String mobile, String nic) {
         this.name = name;
         this.address = address;
         this.mobile = mobile;
@@ -76,7 +67,7 @@ public class TelOperator{
 
     @Override
     public String toString() {
-        return "TelOperator{" +
+        return "RiderDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +

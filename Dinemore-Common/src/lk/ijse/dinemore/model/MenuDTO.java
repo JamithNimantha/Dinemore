@@ -1,31 +1,22 @@
-package lk.ijse.dinemore.entity;
+package lk.ijse.dinemore.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "menu")
-public class Menu {
-    @Id
-    @GeneratedValue
+public class MenuDTO extends SuperDTO {
     private int id;
     private String name;
     private String description;
     private double price;
 
-    public Menu() {
+    public MenuDTO() {
     }
 
-    public Menu(int id, String name, String description, double price) {
+    public MenuDTO(int id, String name, String description, double price) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
     }
 
-    public Menu(String name, String description, double price) {
+    public MenuDTO(String name, String description, double price) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -65,7 +56,7 @@ public class Menu {
 
     @Override
     public String toString() {
-        return "Menu{" +
+        return "MenuDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +

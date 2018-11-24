@@ -5,9 +5,6 @@ import lk.ijse.dinemore.dao.custom.ChefDAO;
 import lk.ijse.dinemore.dao.custom.impl.ChefDAOImpl;
 import lk.ijse.dinemore.entity.Chef;
 import lk.ijse.dinemore.model.ChefDTO;
-import lk.ijse.dinemore.resource.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 
 import java.util.ArrayList;
 import java.util.List;

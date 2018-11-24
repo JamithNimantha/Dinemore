@@ -47,8 +47,8 @@ input[type="text"] {
 }
 
 .button-save:hover{
-    -fx-background-color: #14ff5c;
-    -fx-border-color: #14ff5c;
+    -fx-background-color: #0d9035;
+    -fx-border-color: #0d9035;
     -fx-text-fill: white;
     -fx-background-radius: 5px;
     -fx-border-radius: 5px;

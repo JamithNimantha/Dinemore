@@ -1,11 +1,12 @@
 package lk.ijse.dinemore.business;
 
 import lk.ijse.dinemore.business.custom.impl.ChefBOImpl;
+import lk.ijse.dinemore.business.custom.impl.MenuBOImpl;
 
 public class BOFactory {
     public static BOFactory boFactory;
     public enum BOTypes{
-        CHEF
+        CHEF,MENU
     }
 
     public BOFactory() {
@@ -21,6 +22,8 @@ public class BOFactory {
         switch (boTypes){
             case CHEF:
                 return  new ChefBOImpl();
+            case MENU:
+                return new MenuBOImpl();
             default:
                 return null;
         }

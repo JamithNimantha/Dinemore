@@ -3,6 +3,7 @@ package lk.ijse.dinemore.proxy;
 import lk.ijse.dinemore.service.ServiceFactory;
 import lk.ijse.dinemore.service.SuperService;
 import lk.ijse.dinemore.service.custom.ChefService;
+import lk.ijse.dinemore.service.custom.MenuService;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -13,12 +14,14 @@ public class ProxyHandler implements ServiceFactory {
     private static ProxyHandler proxyHandler;
     private ServiceFactory serviceFactory;
     private ChefService chefService;
+    private MenuService menuService;
 
     private ProxyHandler() {
 
         try {
             serviceFactory =(ServiceFactory) Naming.lookup("rmi://127.0.0.1:5050/dinemore");
             chefService = (ChefService) serviceFactory.getService(ServiceType.CHEF);
+            menuService = (MenuService) serviceFactory.getService(ServiceType.MENU);
         } catch (NotBoundException e) {
             e.printStackTrace();
         } catch (MalformedURLException e) {
@@ -42,6 +45,8 @@ public class ProxyHandler implements ServiceFactory {
         switch (serviceType){
             case CHEF:
                 return chefService;
+            case MENU:
+                return menuService;
              default:
                  return null;
         }

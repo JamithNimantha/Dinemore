@@ -7,10 +7,6 @@ import org.hibernate.HibernateException;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.NativeQuery;
-import org.hibernate.query.Query;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class ChefDAOImpl implements ChefDAO {

@@ -2,11 +2,11 @@ package lk.ijse.dinemore.controller.admin;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -79,7 +79,7 @@ public class ManageChefController implements Initializable{
         tblChef.getColumns().get(3).setCellValueFactory(new PropertyValueFactory<>("address"));
         tblChef.getColumns().get(4).setCellValueFactory(new PropertyValueFactory<>("nic"));
         getAllChefs();
-        txtName.requestFocus();
+        Platform.runLater(() ->txtName.requestFocus() );
     }
     @FXML
     void btnRemoveOnAction(ActionEvent event) {

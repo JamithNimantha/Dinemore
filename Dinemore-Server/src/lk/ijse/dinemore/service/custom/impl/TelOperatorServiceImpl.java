@@ -2,9 +2,9 @@ package lk.ijse.dinemore.service.custom.impl;
 
 import lk.ijse.dinemore.business.BOFactory;
 import lk.ijse.dinemore.business.custom.TelOperatorBO;
+import lk.ijse.dinemore.business.custom.impl.TelOperatorBOImpl;
 import lk.ijse.dinemore.model.TelOperatorDTO;
 import lk.ijse.dinemore.service.custom.TelOperatorService;
-
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
@@ -13,11 +13,13 @@ public class TelOperatorServiceImpl extends UnicastRemoteObject implements TelOp
     private TelOperatorBO telOperatorBO;
 
     public TelOperatorServiceImpl() throws RemoteException {
-        telOperatorBO= (TelOperatorBO) BOFactory.getInstance().getBOTypes(BOFactory.BOTypes.TELOPERATOR);
+//        telOperatorBO= (TelOperatorBO) BOFactory.getInstance().getBOTypes(BOFactory.BOTypes.TELOPERATOR);
+        telOperatorBO= new TelOperatorBOImpl();
     }
 
     @Override
     public boolean addTelOperator(TelOperatorDTO telOperatorDTO) throws Exception {
+        System.out.println(telOperatorDTO+"serviceimpl"+telOperatorBO);
         return telOperatorBO.addTelOperator(telOperatorDTO);
     }
 
@@ -33,9 +35,8 @@ public class TelOperatorServiceImpl extends UnicastRemoteObject implements TelOp
 
     @Override
     public List<TelOperatorDTO> getAllTelOperators() throws Exception {
-        List<TelOperatorDTO> allTelOperator = telOperatorBO.getAllTelOperator();
-        System.out.println(allTelOperator);
-        return allTelOperator;
+         return  telOperatorBO.getAllTelOperator();
+
     }
 
     @Override

@@ -12,13 +12,15 @@ public class TelOperatorDAOImpl implements TelOperatorDAO {
     private SessionFactory sessionFactory;
 
     public TelOperatorDAOImpl() {
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        sessionFactory = HibernateUtil.getSessionFactory();
     }
 
     @Override
     public boolean save(TelOperator entity) throws Exception {
         try (Session session = sessionFactory.openSession()) {
+            System.out.println(session);
             session.getTransaction().begin();
+
             System.out.println(entity);
             session.persist(entity);
             System.out.println(entity);
@@ -33,7 +35,7 @@ public class TelOperatorDAOImpl implements TelOperatorDAO {
     @Override
     public boolean update(TelOperator entity) throws Exception {
         try (Session session = sessionFactory.openSession()) {
-            session.getTransaction().begin();;
+            session.getTransaction().begin();
 
             TelOperator telOperator = session.get(TelOperator.class, entity.getId());
             telOperator.setName(entity.getName());

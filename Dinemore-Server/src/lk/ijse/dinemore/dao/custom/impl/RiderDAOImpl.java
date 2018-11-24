@@ -13,11 +13,11 @@ public class RiderDAOImpl implements RiderDAO {
 
     public RiderDAOImpl() {
         sessionFactory = HibernateUtil.getSessionFactory();
-        System.out.println(sessionFactory);
     }
 
     @Override
     public boolean save(Rider entity){
+        System.out.println(entity+"daoimpl"+sessionFactory);
         System.out.println(sessionFactory);
         try (Session session = sessionFactory.openSession()) {
             session.getTransaction().begin();

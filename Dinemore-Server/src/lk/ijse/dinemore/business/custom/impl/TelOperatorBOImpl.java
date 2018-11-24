@@ -1,13 +1,10 @@
 package lk.ijse.dinemore.business.custom.impl;
 
 import lk.ijse.dinemore.business.custom.TelOperatorBO;
-import lk.ijse.dinemore.dao.custom.ChefDAO;
 import lk.ijse.dinemore.dao.custom.TelOperatorDAO;
-import lk.ijse.dinemore.dao.custom.impl.ChefDAOImpl;
 import lk.ijse.dinemore.dao.custom.impl.TelOperatorDAOImpl;
 import lk.ijse.dinemore.entity.TelOperator;
 import lk.ijse.dinemore.model.TelOperatorDTO;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,12 +17,14 @@ public class TelOperatorBOImpl implements TelOperatorBO {
 
     @Override
     public boolean addTelOperator(TelOperatorDTO telOperatorDTO) throws Exception {
+        System.out.println(telOperatorDTO+"boimpl");
         return telOperatorDAO.save(new TelOperator(
                 telOperatorDTO.getName(),
                 telOperatorDTO.getMobile(),
                 telOperatorDTO.getAddress(),
                 telOperatorDTO.getNic()
         ));
+       // return true;
     }
 
     @Override

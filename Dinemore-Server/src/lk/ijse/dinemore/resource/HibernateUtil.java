@@ -19,7 +19,7 @@ public class HibernateUtil {
         Metadata metadata =new MetadataSources(registry)
                 .addAnnotatedClass(Chef.class)
                 .addAnnotatedClass(Menu.class)
-                //.addAnnotatedClass(TelOperator.class)
+                .addAnnotatedClass(TelOperator.class)
                 .addAnnotatedClass(Rider.class)
                 .buildMetadata();
         return metadata.getSessionFactoryBuilder().build();

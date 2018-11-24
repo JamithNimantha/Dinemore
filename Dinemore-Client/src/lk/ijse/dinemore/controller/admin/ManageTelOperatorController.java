@@ -96,8 +96,6 @@ public class ManageTelOperatorController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     @FXML

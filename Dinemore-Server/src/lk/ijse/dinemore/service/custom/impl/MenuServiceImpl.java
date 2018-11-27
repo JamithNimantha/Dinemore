@@ -1,7 +1,6 @@
 package lk.ijse.dinemore.service.custom.impl;
 
 import lk.ijse.dinemore.business.BOFactory;
-import lk.ijse.dinemore.business.SuperBO;
 import lk.ijse.dinemore.business.custom.MenuBO;
 import lk.ijse.dinemore.model.MenuDTO;
 import lk.ijse.dinemore.service.custom.MenuService;

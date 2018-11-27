@@ -5,6 +5,7 @@ import lk.ijse.dinemore.dao.custom.TelOperatorDAO;
 import lk.ijse.dinemore.dao.custom.impl.TelOperatorDAOImpl;
 import lk.ijse.dinemore.entity.TelOperator;
 import lk.ijse.dinemore.model.TelOperatorDTO;
+
 import java.util.ArrayList;
 import java.util.List;
 

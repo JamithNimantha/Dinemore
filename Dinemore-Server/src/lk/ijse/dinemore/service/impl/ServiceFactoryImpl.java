@@ -18,11 +18,9 @@ public class ServiceFactoryImpl extends UnicastRemoteObject implements ServiceFa
     public ServiceFactory getInstance() throws RemoteException{
         if (serviceFactory==null){
             serviceFactory=new ServiceFactoryImpl();
-
         }
         return serviceFactory;
     }
-
     @Override
     public SuperService getService(ServiceType serviceType) throws Exception {
        switch (serviceType){

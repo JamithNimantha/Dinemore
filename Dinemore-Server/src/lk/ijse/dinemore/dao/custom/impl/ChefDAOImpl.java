@@ -4,9 +4,9 @@ import lk.ijse.dinemore.dao.custom.ChefDAO;
 import lk.ijse.dinemore.entity.Chef;
 import lk.ijse.dinemore.resource.HibernateUtil;
 import org.hibernate.HibernateException;
-import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
 import java.util.List;
 
 public class ChefDAOImpl implements ChefDAO {

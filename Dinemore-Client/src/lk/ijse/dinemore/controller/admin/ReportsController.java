@@ -4,14 +4,11 @@ import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import lk.ijse.dinemore.common.DBConnection;
-import lk.ijse.dinemore.proxy.ProxyHandler;
-import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.InputStream;
-import java.sql.SQLException;
 import java.util.HashMap;
 
 public class ReportsController {
